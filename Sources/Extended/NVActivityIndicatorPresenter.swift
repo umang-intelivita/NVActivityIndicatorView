@@ -278,7 +278,9 @@ public final class NVActivityIndicatorPresenter {
 
         activityIndicatorView.startAnimating()
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.addSubview(activityIndicatorView)
+        DispatchQueue.main.async {
+            containerView.addSubview(activityIndicatorView)
+        }
 
         // Add constraints for `activityIndicatorView`.
         ({
